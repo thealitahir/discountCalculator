@@ -1,0 +1,27 @@
+version: '3'
+services:
+    app:
+        container_name: docker-node-postgres
+        restart: always
+        build: .
+        ports: 
+            - '5000:5000'
+        links:
+            - postgres
+        environment: 
+            - DB_SCHEMA=postgres
+            - DB_USER=postgres
+            - DB_PASSWORD=postgres
+            - DB_HOST=postgres
+    postgres:
+        container_name: postgres
+        image: postgres
+        environment:
+          - POSTGRES_USER=postgres
+          - POSTGRES_PASSWORD=postgres
+        ports: 
+          - '5432:5432'
+        volumes:
+          - discountcalculator-db:/var/lib/postgresql/data
+volumes:
+  discountcalculator-db:
