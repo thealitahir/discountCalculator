@@ -62,5 +62,5 @@ Once the database is in place execute `yarn dev`, it will expose the app on [htt
 
 ## Important Note ##
 
-Due to shortage of time, I couldn't achieve extra tasks. The features that are currently missing is password hashing, adding eslint rules, achieving the current. Test cases and swagger documentation is very important but I 
+Due to shortage of time, I couldn't achieve extra tasks. The features that are currently missing is password hashing, adding eslint rules, complete docker setup. Test cases and swagger documentation is very important but I 
 couldn't achieve it due to shortage of time.
