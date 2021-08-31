@@ -1,5 +1,4 @@
 
-import * as jwt from 'jsonwebtoken'
 import { IncomingHttpHeaders } from 'http';
 import { RequestHandler } from 'express'
 import { UserController } from '../controllers/user'

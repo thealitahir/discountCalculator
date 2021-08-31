@@ -17,10 +17,50 @@ After this run this migration command to setup the db on your dev environment: `
 ### Available routes ###
 I've added JWT authentication which means you have to register first  and then login to get the token to access the APIs
 
- * /register
+ * POST /register
         ```
         {
             "email":"abc@abc.com"
             "password":"xxxxxxxx"
         }
         ```
+ * POST /login
+        ```
+        {
+            "email":"abc@abc.com"
+            "password":"xxxxxxxx"
+        }
+        ```
+ * POST /product/addProduct
+        ```
+        {
+            "name":"p",
+            "discount":10,
+            "categoryId":1
+        }
+        ```
+* POST /category/addCategory
+        ```
+        {
+            "name":"c",
+            "discount":10,
+            "categoryId":1
+        }
+        ```
+
+* POST /product/getDiscount
+        ```
+        {
+            "name":"p",
+            "user_id":1,
+            "invoice_amount":100
+        }
+        ```
+## Running the application
+
+Once the database is in place execute `yarn dev`, it will expose the app on [http://localhost:5000](http://localhost:3000) by default.
+
+## Important Note ##
+
+Due to shortage of time, I couldn't achieve extra tasks. The features that are currently missing is password hashing, adding eslint rules, achieving the current. Test cases and swagger documentation is very important but I 
+couldn't achieve it due to shortage of time.

@@ -1,5 +1,5 @@
 import { ProductModel, Product} from '../models/product'
-import { Category, CategoryModel } from '../models/category'
+import { Category } from '../models/category'
 
 export class ProductController {
 
